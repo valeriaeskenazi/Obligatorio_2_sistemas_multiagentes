@@ -299,24 +299,3 @@ class AgentEvaluator:
         axes[1].legend()
         axes[1].tick_params(axis='x', rotation=45)
         
-
-# Ejemplo de uso:
-"""
-# Configurar agentes
-game = TicTacToe()  # Instancia temporal para configurar agentes
-agents = {
-    'Random': RandomAgent(game=game, agent='X'),
-    'MinMax_d1': MiniMax(game=game, agent='X', depth=1),
-    'MinMax_d3': MiniMax(game=game, agent='X', depth=3),
-    'MCTS_100': MonteCarloTreeSearch(game=game, agent='X', simulations=100),
-}
-
-# Ejecutar evaluación
-evaluator = AgentEvaluator(TicTacToe)
-evaluator.run_tournament(agents, num_games=200)
-df, performance, matrix = evaluator.generate_report()
-
-# Gráficos de evolución
-evaluator.plot_results(df)  # Incluye evolución básica
-evaluator.plot_detailed_evolution()  # Análisis más profundo
-"""
